@@ -27,7 +27,7 @@ O **It Scraping** foi desenvolvido para automatizar a tarefa repetitiva de pesqu
 - ​Linguagem: Python 3.
 - ​Automação: Selenium WebDriver.
 - ​Manipulação de Dados: Biblioteca nativa csv para o banco de dados histórico.
-​Geração de Relatórios: Pandas (para exportação em Excel).
+- ​Geração de Relatórios: Pandas (para exportação em Excel).
 - ​Notificações: Windows Desktop Alerts.
 ​Drivers: ChromeDriver (para interação com Google Chrome).
 
