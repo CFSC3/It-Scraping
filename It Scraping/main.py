@@ -1,5 +1,6 @@
 from selenium import webdriver # type: ignore
 from selenium.webdriver.chrome.options import Options # type: ignore
+import pandas as pd
 from bs4 import BeautifulSoup # type: ignore
 from plyer import notification # type: ignore
 import csv ## Importando a biblioteca csv para manipulação de arquivos CSV
@@ -28,9 +29,9 @@ def extrair_informacoes():
     ## Abrindo um arquivo CSV para escrita, com o nome 'notebooks.csv' e configurando o modo de escrita, nova linha e codificação
     with open('precos_notebooks.csv', mode='w', newline='', encoding='utf-8') as arquivo: 
         ## Criando um objeto escritor CSV para escrever no arquivo
-        escritor_csv = csv.writer(arquivo)
+        escritor_csv = csv.writer(arquivo, delimiter=';')
         ## Escrevendo a linha de cabeçalho no arquivo CSV com os nomes das colunas 'Produto' e 'Preço'
-        escritor_csv.writerow(['Produto', 'Preço']) 
+        escritor_csv.writerow(['Produto', 'Preco']) 
 
         for numPage in range(1, count + 1): ## Loop para iterar sobre as páginas de 1 a 6
 
@@ -68,15 +69,26 @@ def extrair_informacoes():
         
             except Exception as e:
                 print(f"Erro ao acessar a página: {e}")
+
     driver.quit() ## Fechando o navegador após concluir a extração das informações
+
+    ## Pandas para ler o arquivo CSV gerado e criar um DataFrame, e depois converter esse DataFrame para um arquivo Excel com o nome 'precos_notebooks.xlsx' 
+    ## sem incluir o índice das linhas, usando a função to_excel do pandas. O DataFrame é impresso para verificar se os dados foram lidos corretamente.
+    tabela = pd.read_csv('precos_notebooks.csv', delimiter=';') 
+    print(tabela) ## Imprimindo o DataFrame para verificar se os dados foram lidos corretamente
+
+    tabela.to_excel('precos_notebooks.xlsx', index=False) ## Convertendo o DataFrame para um arquivo Excel com o nome 'precos_notebooks.xlsx' e sem incluir o índice das linhas
+
     print("\n✅ Processo finalizado! O arquivo 'precos_notebooks.csv' foi gerado.")
+    print("Scraping finalizado e planilha do Excel gerada com sucesso!")
 
 def carregar_precos_antigos(): ## Função para carregar os preços antigos do arquivo CSV e armazená-los em um dicionário para comparação futura
     precos_antigos = {}
     try:
         with open('precos_notebooks.csv', mode='r', encoding='utf-8') as f:
-            leitor = csv.reader(f)
-            next(leitor) # Pula o cabeçalho
+            leitor = csv.reader(f, delimiter=';')
+            if next(leitor, None) is None:
+                return {} # Retorna um dicionário vazio pois não há dados para carregar
             for linha in leitor:
                 # Nome do produto é a chave, Preço é o valor
                 precos_antigos[linha[0]] = float(linha[1])
