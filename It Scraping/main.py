@@ -1,6 +1,6 @@
 from selenium import webdriver # type: ignore
 from selenium.webdriver.chrome.options import Options # type: ignore
-import pandas as pd
+import pandas as pd # type: ignore
 from bs4 import BeautifulSoup # type: ignore
 from plyer import notification # type: ignore
 import csv ## Importando a biblioteca csv para manipulação de arquivos CSV
@@ -24,7 +24,7 @@ def extrair_informacoes():
 
     driver = webdriver.Chrome(options=chrome_options) ## Criando uma instância do navegador Chrome usando o Selenium
     
-    count = int(numPages.getNumPage(driver)) ## Obtendo o número total de páginas a serem processadas usando a função getNumPage do módulo numPages
+    count = numPages.getNumPage(driver) ## Obtendo o número total de páginas a serem processadas usando a função getNumPage do módulo numPages
 
     ## Abrindo um arquivo CSV para escrita, com o nome 'notebooks.csv' e configurando o modo de escrita, nova linha e codificação
     with open('precos_notebooks.csv', mode='w', newline='', encoding='utf-8') as arquivo: 

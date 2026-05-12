@@ -16,8 +16,8 @@ def getNumPage(driver):
             qtdPages = site.find('p', class_ = 'bemolqa-store-components-8-x-custom-total-product') ## Encontrando todas as tags <p> com a classe específica que contém as informações desejadas
             texto = qtdPages.text.strip()
             vetor = texto.split()
-            num = vetor[3] 
-            return num 
+            num = int(vetor[3])
+            return num
 
         else:
             print("Falha na requisição!")
