@@ -22,12 +22,12 @@ Este projeto demonstra conhecimentos em automação de navegadores, manipulaçã
 
 ## 📸 Demonstração
 <div align="center">
-  <img src="it scraping/img/img1.png" alt="Script em execução no terminal" width="600px">
-  <img src="it scraping/img/img2.png" alt="funcionado" width="600px">
-  <img src="it scraping/img/img3.png" alt="notificação" width="600px">
-  <img src="it scraping/img/img4.png" alt="finalização" width="600px">
-  <img src="it scraping/img/img5.png" alt="arquivo csv" width="600px">
-  <img src="it scraping/img/img6.png" alt="arquivo Excel" width="600px">
+  <img src="It Scraping/img/img1.png" alt="Script em execução no terminal" width="600px">
+  <img src="It Scraping/img/img2.png" alt="funcionado" width="600px">
+  <img src="It Scraping/img/img3.png" alt="notificação" width="600px">
+  <img src="It Scraping/img/img4.png" alt="finalização" width="600px">
+  <img src="It Scraping/img/img5.png" alt="arquivo csv" width="600px">
+  <img src="It Scraping/img/img6.png" alt="arquivo Excel" width="600px">
 </div>
 
 ## 🚀 Como Executar
