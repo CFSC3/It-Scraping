@@ -24,11 +24,11 @@ O **It Scraping** foi desenvolvido para automatizar a tarefa repetitiva de pesqu
 - ​✅ **Relatórios em Excel via Pandas:** Conversão final dos dados coletados para o formato .xlsx utilizando Pandas para visualização profissional.
 
 ## ​🛠️ Tecnologias Utilizadas
-- ​Linguagem: Python 3.
-- ​Automação: Selenium WebDriver.
-- ​Manipulação de Dados: Biblioteca nativa csv para o banco de dados histórico.
-- ​Geração de Relatórios: Pandas (para exportação em Excel).
-- ​Notificações: Windows Desktop Alerts.
+- ​**Linguagem:** Python 3.
+- ​**Automação:** Selenium WebDriver.
+- ​**Manipulação de Dados:** Biblioteca nativa csv para o banco de dados histórico.
+- ​**Geração de Relatórios:** Pandas (para exportação em Excel).
+- ​**Notificações:** Windows Desktop Alerts.
 ​Drivers: ChromeDriver (para interação com Google Chrome).
 
 ## 📸 Demonstração
