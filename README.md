@@ -4,23 +4,31 @@ Um sistema de web scraping automatizado para coleta e monitoramento de preços d
 
 ## 📝 Sobre o Projeto
 O **It Scraping** foi desenvolvido para automatizar a tarefa repetitiva de pesquisar e registrar preços de produtos. O script utiliza o Selenium WebDriver para monitorar e-commerces, extraindo os preços atuais e comparando-os com os registros históricos armazenados em um arquivo CSV.
+
 ​A lógica central do sistema é identificar flutuações de mercado e disparar alertas visuais no Windows sempre que um produto atingir um valor inferior ao registrado anteriormente.
 
 ## ​✨ Funcionalidades
-​✅ Navegação Automatizada: Interação real com o navegador para carregar conteúdos dinâmicos.
-​✅ Paginação Inteligente: Identifica e percorre múltiplas páginas de resultados de forma autônoma.
-​✅ Monitoramento de Preços: Extração precisa de títulos e valores de notebooks para análise comparativa.
-​✅ Análise Comparativa Histórica: O sistema lê o arquivo precos_notebooks.csv e compara o preço atual com o último valor registrado para aquele produto.
-​✅ Alertas de Queda de Preço (Windows): Caso o sistema detecte que o notebook está mais barato, ele emite uma notificação nativa do Windows avisando o usuário sobre a oferta.
-​✅ Persistência em CSV: Uso da biblioteca nativa csv para escrever e manter o histórico de preços atualizado.
-​✅ Relatórios em Excel via Pandas: Conversão final dos dados coletados para o formato .xlsx utilizando Pandas para visualização profissional.
+
+- ​✅ **Navegação Automatizada:** Interação real com o navegador para carregar conteúdos dinâmicos.
+
+- ​✅ **Paginação Inteligente:** Identifica e percorre múltiplas páginas de resultados de forma autônoma.
+
+- ​✅ **Monitoramento de Preços:** Extração precisa de títulos e valores de notebooks para análise comparativa.
+
+- ​✅ **Análise Comparativa Histórica:** O sistema lê o arquivo precos_notebooks.csv e compara o preço atual com o último valor registrado para aquele produto.
+
+- ​✅ **Alertas de Queda de Preço (Windows):** Caso o sistema detecte que o notebook está mais barato, ele emite uma notificação nativa do Windows avisando o usuário sobre a oferta.
+
+- ​✅ **Persistência em CSV:** Uso da biblioteca nativa csv para escrever e manter o histórico de preços atualizado.
+
+- ​✅ **Relatórios em Excel via Pandas:** Conversão final dos dados coletados para o formato .xlsx utilizando Pandas para visualização profissional.
 
 ## ​🛠️ Tecnologias Utilizadas
-​Linguagem: Python 3.
-​Automação: Selenium WebDriver.
-​Manipulação de Dados: Biblioteca nativa csv para o banco de dados histórico.
+- ​Linguagem: Python 3.
+- ​Automação: Selenium WebDriver.
+- ​Manipulação de Dados: Biblioteca nativa csv para o banco de dados histórico.
 ​Geração de Relatórios: Pandas (para exportação em Excel).
-​Notificações: Windows Desktop Alerts.
+- ​Notificações: Windows Desktop Alerts.
 ​Drivers: ChromeDriver (para interação com Google Chrome).
 
 ## 📸 Demonstração
